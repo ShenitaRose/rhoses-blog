@@ -3,19 +3,19 @@ export default {
     Trending : [
         {
             id: 1,
-            title: "Your most unhappy customers are your greatest source of learning",
+            title: "Rhia finds love",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/img1.jpg",
+            img : "/images/cute.jpg",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
             `,
             published: "Jun 3,  2022",
             author: {
-                name: "Flying High",
-                img: "/images/author/author1.jpg",
-                designation : "CEO and Founder"
+                name: "Simsationelle",
+                img: "/images/zen.png",
+                designation : "Youtuber and Sims Storyteller"
             }
         },
         {
@@ -23,7 +23,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/img2.jpg",
+            img : "/images/cute.jpg",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -31,7 +31,7 @@ export default {
             published: "Jun 5,  2022",
             author: {
                 name: "Flying High",
-                img: "/images/author/author1.jpg",
+                img: "/images/zen.png",
                 designation : "CEO and Founder"
             }
         },
@@ -40,7 +40,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/img3.png",
+            img : "/images/cute.jpg",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -48,7 +48,7 @@ export default {
             published: "Jun 7,  2022",
             author: {
                 name: "Flying High",
-                img: "/images/author/author1.jpg",
+                img: "/images/zen.png",
                 designation : "CEO and Founder"
             }
         },
@@ -57,7 +57,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/img4.png",
+            img : "/images/cute.jpg",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -74,7 +74,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/img5.png",
+            img : "/images/cute.jpg",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -90,10 +90,10 @@ export default {
     Posts : [
         {
             id: 1,
-            title: "Your most unhappy customers are your greatest source of learning",
+            title: "Rhia learns to cook",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-            category: "Business, Travel",
-            img : "/images/articles/posts/img1.jpg",
+            category: "Romance, Education",
+            img : "/images/cute.png",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -120,7 +120,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/articles/posts/img2.png",
+            img : "/images/cute.png",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -147,7 +147,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/articles/posts/img3.png",
+            img : "/images/cute.png",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -174,7 +174,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/articles/posts/img4.png",
+            img : "/images/cute.png",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -201,7 +201,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/articles/posts/img5.png",
+            img : "/images/cute.png",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -228,7 +228,7 @@ export default {
             title: "Your most unhappy customers are your greatest source of learning",
             subtitle: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
             category: "Business, Travel",
-            img : "/images/articles/posts/img2.png",
+            img : "/images/cute.png",
             description: `
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
