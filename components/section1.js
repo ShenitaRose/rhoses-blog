@@ -2,12 +2,23 @@ import Image from "next/image"
 import Link from "next/link"
 import Author from "./_child/author"
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react';
 import SwiperCore, {Autoplay} from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
+import fetcher from '../lib/fetcher'
+import Spinner from "./_child/spinner"
+import Error from "./_child/error"
+
 
 export default function Section1() {
+
+    const { data,isLoading,isError}=fetcher('api/trending')
+
+    if(isLoading)return<Spinner />;
+    if(isError)return<Error />
+
+
     SwiperCore.use([Autoplay])
 
    
@@ -22,11 +33,11 @@ export default function Section1() {
             delay:3000
           }}
         >
-       <SwiperSlide>{Slide()}</SwiperSlide>
-       <SwiperSlide>{Slide()}</SwiperSlide>
-       <SwiperSlide>{Slide()}</SwiperSlide>
-       <SwiperSlide>{Slide()}</SwiperSlide>
-       <SwiperSlide>{Slide()}</SwiperSlide>
+        {
+            data.map((value,index) => (
+                <SwiperSlide key={index}><Slide data={value}></Slide></SwiperSlide>
+            ))
+        }
     </Swiper>
         
         
@@ -35,12 +46,17 @@ export default function Section1() {
   )
 }
 
-function Slide(){
+function Slide({data}){
+
+
+
+    const {id,title,category,img,published,description,author}=data;
+
     return(
         <div className="grid md:grid-cols-2">
             <div className="image">
             <Link href={"/"}>
-                    <Image src={"/images/Telephone.png"} 
+                    <Image src={img ||"/" } 
                     width={600} 
                     height={600}
                     alt="Image of my sim" />
@@ -48,17 +64,14 @@ function Slide(){
             </div>
             <div className="info flex justify-center flex-col">
             <div className="cat">
-            <Link href={"/"} className="text-orange-600 hover:text-orange-800">Stories</Link>
-            <Link href={"/"} className="text-gray-800 hover:text-gray-600">-July 2, 2023</Link>
+            <Link href={"/"} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
+            <Link href={"/"} className="text-gray-800 hover:text-gray-600">-{published || "Unknown"}</Link>
             </div>
             <div className="title">
-            <Link href={"/"} className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">Rhia finds love in one of the most Hopeless places ever!</Link>
+            <Link href={"/"} className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
             </div>
-            <p className="text-gray-500 py-3">
-            Today Rhia decided that she was going to go out and enjoy herself.
-            Rhia has been at home since Lock down and has found it quite difficult to make friends. She had just moved to Moonwood Mill and was Hoping for a fresh Start.
-            </p>
-            <Author />
+            <p className="text-gray-500 py-3">{description || "description"}</p>
+            {author?<Author />:<></>}
             </div>
 
         </div>

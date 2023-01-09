@@ -2,9 +2,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from "next/link"
 import Image from "next/image"
 import Author from "./_child/author"
-
+import fetcher from '../lib/fetcher'
+import Spinner from "./_child/spinner"
+import Error from "./_child/error"
 
 export default function Section3() {
+
+    const { data,isLoading,isError}=fetcher('api/popular')
+
+    if(isLoading)return<Spinner />;
+    if(isError)return<Error />
+
+
   return (
     <section className="container mx-auto md:px-20 py-16">
         <h1 className="font-bold text-4xl py-12 text-center">Most Popular</h1>
@@ -13,35 +22,36 @@ export default function Section3() {
         <Swiper
         slidesPerView={2}
         >
-            <SwiperSlide>{Post()}</SwiperSlide>
-            <SwiperSlide>{Post()}</SwiperSlide>
-            <SwiperSlide>{Post()}</SwiperSlide>
-            <SwiperSlide>{Post()}</SwiperSlide>
+            {
+            data.map((value,index) => (
+                <SwiperSlide key={index}><Post data={value}></Post></SwiperSlide>
+            ))
+        }
         </Swiper>
     </section>
   )
 }
 
 
-function Post(){
+function Post({data}){
+
+    const {id,title,category,img,published,description,author}=data;
+
     return(
         <div className="grid">
             <div className="images">
-                <Link href={"/"}><Image src={"/images/Baby.png"} width={600} height={400} alt="Image of my sim"/></Link> 
+                <Link href={"/"}><Image src={img ||"/" } width={600} height={400} alt="Image of my sim"/></Link> 
             </div>
             <div className="info flex justify-center flex-col py-4">
                 <div className="cat">
-            <Link href={"/"} className="text-orange-600 hover:text-orange-800">Stories</Link>
-            <Link href={"/"} className="text-gray-800 hover:text-gray-600">-July 2, 2023</Link>
+            <Link href={"/"} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
+            <Link href={"/"} className="text-gray-800 hover:text-gray-600">-{published || "Unknown"}</Link>
             </div>
             <div className="title">
-            <Link href={"/"} className="text-3xl md:text-4xl font-bold text-gray-800 hover:text-gray-600">The baby is here!</Link>
+            <Link href={"/"} className="text-3xl md:text-4xl font-bold text-gray-800 hover:text-gray-600">{title || "No Title"}</Link>
             </div>
-            <p className="text-gray-500 py-3">
-            At 12AM, Rhia gave birth to a bouncing baby girl who she named Ainsley.
-            Her husband Nick has been so inlove with the little one that sometimes Rhia has to beg him to let her hold the baby.
-            </p>
-            <Author />
+            <p className="text-gray-500 py-3">{description || " No Description"}</p>
+            {author?<Author />:<></>}
             </div>
         </div>
     )
