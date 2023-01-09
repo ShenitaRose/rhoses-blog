@@ -50,7 +50,7 @@ function Slide({data}){
 
 
 
-    const {id,title,category,img,published,description,author}=data;
+    const {title,category,img,published,description,author}=data;
 
     return(
         <div className="grid md:grid-cols-2">
