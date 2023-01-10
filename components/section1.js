@@ -50,12 +50,12 @@ function Slide({data}){
 
 
 
-    const {title,category,img,published,description,author}=data;
+    const {id,title,category,img,published,description,author}=data;
 
     return(
         <div className="grid md:grid-cols-2">
             <div className="image">
-            <Link href={"/"}>
+            <Link href={`/posts/${id}`}>
                     <Image src={img ||"/" } 
                     width={600} 
                     height={600}
@@ -64,11 +64,11 @@ function Slide({data}){
             </div>
             <div className="info flex justify-center flex-col">
             <div className="cat">
-            <Link href={"/"} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
-            <Link href={"/"} className="text-gray-800 hover:text-gray-600">-{published || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-gray-800 hover:text-gray-600">-{published || "Unknown"}</Link>
             </div>
             <div className="title">
-            <Link href={"/"} className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
             </div>
             <p className="text-gray-500 py-3">{description || "description"}</p>
             {author?<Author />:<></>}

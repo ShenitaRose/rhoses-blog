@@ -34,15 +34,15 @@ function Post({data}){
     return(
         <div className="item">
             <div className="images">
-                <Link href={"/"}><Image src={img} width={500} height={350} alt="Image of my sim" className="rounded"/></Link> 
+                <Link href={`/posts/${id}`}><Image src={img} width={500} height={350} alt="Image of my sim" className="rounded"/></Link> 
             </div>
             <div className="info flex justify-center flex-col py-4">
                 <div className="cat">
-            <Link href={"/"} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
-            <Link href={"/"} className="text-gray-800 hover:text-gray-600">-{published || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-gray-800 hover:text-gray-600">-{published || "Unknown"}</Link>
             </div>
             <div className="title">
-            <Link href={"/"} className="text-xl font-bold text-gray-800 hover:text-gray-600">{title || "Title"}</Link>
+            <Link href={`/posts/${id}`} className="text-xl font-bold text-gray-800 hover:text-gray-600">{title || "Title"}</Link>
             </div>
             <p className="text-gray-500 py-3">{subtitle || "Subtitle"}</p>
             {author?<Author />:<></>}
