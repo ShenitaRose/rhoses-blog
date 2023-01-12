@@ -56,7 +56,7 @@ function Post({data}){
             <Link href={`/posts/${id}`} className="text-3xl md:text-4xl font-bold text-gray-800 hover:text-gray-600">{title || "No Title"}</Link>
             </div>
             <p className="text-gray-500 py-3">{description || " No Description"}</p>
-            {author?<Author />:<></>}
+            {author?<Author {...author} />:<></>}
             </div>
         </div>
     )
