@@ -20,8 +20,7 @@ export default function Section1() {
 
 
     SwiperCore.use([Autoplay])
-
-   
+  
   return (
     <section className="py-16">
         <div className="container mx-auto md:px-20">
@@ -71,7 +70,7 @@ function Slide({data}){
             <Link href={`/posts/${id}`} className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
             </div>
             <p className="text-gray-500 py-3">{description || "description"}</p>
-            {author?<Author />:<></>}
+            {author?<Author {...author} />:<></>}
             </div>
 
         </div>

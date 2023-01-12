@@ -14,8 +14,8 @@ export default function Header() {
                 <div className="w-96 order-3 flex justify-center">
                     <div className="flex gap-6">
                         <Link href={"/"}><ImFacebook color="#888888"/></Link>
-                        <Link href={"/"}><ImTwitter color="#888888"/></Link>
-                        <Link href={"/"}><ImYoutube color="#888888"/></Link>
+                        <Link href={"https://twitter.com/simsationelle"}><ImTwitter color="#888888"/></Link>
+                        <Link href={"https://www.youtube.com/channel/UCMNtidmZebCA9wgeY3s-t8Q"}><ImYoutube color="#888888"/></Link>
                     </div>
                 </div>
 
