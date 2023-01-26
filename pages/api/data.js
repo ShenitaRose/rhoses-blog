@@ -98,6 +98,22 @@ export default {
                 designation : "Youtuber and Sims Storyteller"
             }
         },
+        {
+            id: 7,
+            title: "Home Sweet Home",
+            subtitle: "The Legacy truly has begun",
+            category: "Gaming, Sims",
+            img : "/images/home.png",
+            description: `
+            They say home is where the heart is. Truly it is. Traci has been feeling introverted and just wanting to be at home
+            `,
+            published: "Jan 10,  2023",
+            author: {
+                name: "Simsationelle",
+                img: "/images/avatar.jpg",
+                designation : "Youtuber and Sims Storyteller"
+            }
+        },
     ],
     Posts : [
         {
